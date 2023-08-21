@@ -101,6 +101,7 @@ const quote = [
 ];
 const quoteToDisplay = document.querySelector("blockquote");
 const authorToDisplay = document.querySelector("span");
+const reload = document.querySelector(".reloader");
 
 const onLoad = function () {
   const rn = Math.floor(Math.random() * 20);
@@ -108,5 +109,6 @@ const onLoad = function () {
   quoteToDisplay.textContent = quote[rn].quote;
   authorToDisplay.textContent = quote[rn].author;
 };
-
 onLoad();
+
+reload.addEventListener("click", onLoad);

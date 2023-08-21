@@ -20,6 +20,7 @@ body {
 header {
   max-width: 100rem;
   background-color: #fff;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,7 +40,7 @@ blockquote {
 blockquote::before {
   position: absolute;
   content: '"';
-  top: -18%;
+  top: -4rem;
   left: -3.5%;
   font-size: 12.8rem;
   font-weight: 200;
@@ -49,4 +50,20 @@ p {
   color: #999;
   margin-left: auto;
   font-size: 3.2rem;
+}
+
+.reloader {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px rgba(34, 34, 34, 0.3);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.reloader:active {
+  transform: translate(-50%, -45%);
 }
